@@ -33,4 +33,8 @@ public class MemoryBookRepository implements BookRepository {
     public List<Book> findAll() {
         return new ArrayList<>(store.values());
     }
+
+    public void clearStore() {
+        store.clear();
+    }
 }
