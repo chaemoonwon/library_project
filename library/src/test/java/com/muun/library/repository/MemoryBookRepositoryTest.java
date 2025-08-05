@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MemoryBookRepositoryTest {
 
@@ -23,7 +22,7 @@ class MemoryBookRepositoryTest {
     @Test
     void save() {
         Book book = new Book();
-        book.setName("book");
+        book.setTitle("book");
 
         repository.save(book);
 
@@ -36,11 +35,11 @@ class MemoryBookRepositoryTest {
     @Test
     void findByName() {
         Book book1 = new Book();
-        book1.setName("book1");
+        book1.setTitle("book1");
         repository.save(book1);
 
         Book book2 = new Book();
-        book2.setName("book2");
+        book2.setTitle("book2");
         repository.save(book2);
 
         Book result = repository.findByName("book1").get();
@@ -51,11 +50,11 @@ class MemoryBookRepositoryTest {
     @Test
     void findAll() {
         Book book1 = new Book();
-        book1.setName("book1");
+        book1.setTitle("book1");
         repository.save(book1);
 
         Book book2 = new Book();
-        book2.setName("book2");
+        book2.setTitle("book2");
         repository.save(book2);
 
         List<Book> result = repository.findAll();

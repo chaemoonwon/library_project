@@ -25,7 +25,7 @@ public class MemoryBookRepository implements BookRepository {
     @Override
     public Optional<Book> findByName(String name) {
         return store.values().stream()
-                .filter(book -> book.getName().equals(name))
+                .filter(book -> book.getTitle().equals(name))
                 .findAny();
     }
 
