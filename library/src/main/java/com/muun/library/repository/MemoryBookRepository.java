@@ -1,9 +1,11 @@
 package com.muun.library.repository;
 
 import com.muun.library.domain.Book;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryBookRepository implements BookRepository {
 
     //동시성 문제 고려 x
